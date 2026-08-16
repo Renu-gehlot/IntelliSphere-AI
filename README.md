@@ -19,22 +19,6 @@
 
 ---
 
-## 🏗 System Architecture
-
-Frontend (React + Vite)
-        │
-        ▼
-FastAPI Backend
-        │
- ┌──────┼────────┐
- │      │        │
- ▼      ▼        ▼
-SQLite  FAISS   Gemini AI
-        │
-        ▼
- Intelligent Retrieval
-
----
 
 ## 🛠 Tech Stack
 
