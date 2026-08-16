@@ -1,0 +1,19 @@
+body{
+  margin:0;
+  background:#F4F7FC;
+  font-family:Inter,Arial,sans-serif;
+}
+
+.app{
+  max-width:1200px;
+  margin:auto;
+  padding:30px;
+}
+
+.section{
+  background:white;
+  border-radius:18px;
+  padding:24px;
+  margin-bottom:24px;
+  box-shadow:0 8px 24px rgba(15,23,42,.08);
+}
