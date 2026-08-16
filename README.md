@@ -6,12 +6,6 @@
 
 ---
 
-<p align="center">
-  <img src="assets/dashboard.png" width="90%" alt="IntelliSphere Dashboard">
-</p>
-
----
-
 ## 📖 Overview
 
 IntelliSphere AI is a full-stack intelligent decision platform designed to help users organize projects, build a searchable knowledge base, analyze images, and interact with documents using natural language.
