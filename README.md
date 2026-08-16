@@ -41,11 +41,11 @@
 
 ### Knowledge Base
 
-> Add: \`assets/knowledge-base.png\`
+> Add: \`assetsknowledge-base.png\`
 
 ### AI Assistant
 
-> Add: \`assets/ai-chat.png\`
+> Add: \`assetsai-chat.png\`
 
 ---
 
