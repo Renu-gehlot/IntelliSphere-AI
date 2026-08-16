@@ -1,129 +1,312 @@
-{`# 🧠 IntelliSphere AI
+# 🧠 IntelliSphere AI
 
-> **Autonomous Decision Intelligence Platform**
->
-> A full-stack AI platform that combines document intelligence, image understanding, project management, and an AI assistant into one modern workspace.
+### Autonomous Decision Intelligence Platform
 
----
-
-## ✨ Features
-
-- 📄 Upload PDF, DOCX & TXT documents
-- 🖼️ AI-powered image understanding using Gemini
-- 🤖 Chat with your documents (RAG + FAISS)
-- 📚 Knowledge Base for intelligent retrieval
-- 📋 Project Management Dashboard
-- 📊 Analytics Dashboard
-- 🔍 Search, Sort, Edit & Delete projects
-- 💾 SQLite database integration
+> **An AI-powered workspace that combines intelligent document understanding, image analysis, project management, and conversational AI into one modern platform.**
 
 ---
 
-
-## 🛠 Tech Stack
-
-| Layer | Technology |
-|--------|------------|
-| Frontend | React, Vite, CSS |
-| Backend | FastAPI |
-| Database | SQLite |
-| AI | Gemini 2.5 Flash |
-| Retrieval | FAISS |
-| Language | Python |
+<p align="center">
+  <img src="assets/dashboard.png" width="90%" alt="IntelliSphere Dashboard">
+</p>
 
 ---
 
-## 📸 Screenshots
+## 📖 Overview
 
-### Dashboard
+IntelliSphere AI is a full-stack intelligent decision platform designed to help users organize projects, build a searchable knowledge base, analyze images, and interact with documents using natural language.
 
-> Add: \`assets/dashboard.png\`
+The platform integrates **Retrieval-Augmented Generation (RAG)**, **Gemini AI**, **FAISS**, and **SQLite** to provide contextual answers while maintaining an elegant React + FastAPI interface.
 
-### Knowledge Base
-
-> Add: \`assetsknowledge-base.png\`
-
-### AI Assistant
-
-> Add: \`assetsai-chat.png\`
+Whether you're managing academic documents, enterprise reports, or personal knowledge, IntelliSphere AI transforms static files into an interactive AI assistant.
 
 ---
 
-## 🚀 Installation
+# ✨ Features
 
-### Clone Repository
+✅ Upload PDF, DOCX & TXT documents
 
-\`\`\`bash
+✅ AI-powered Image Understanding (Gemini Vision)
+
+✅ Intelligent Knowledge Base
+
+✅ Chat with Documents using RAG
+
+✅ Semantic Search with FAISS
+
+✅ Project Management Dashboard
+
+✅ Edit, Delete & Track Project Status
+
+✅ Analytics Dashboard
+
+✅ SQLite Database Integration
+
+✅ FastAPI REST APIs
+
+✅ Modern React + Vite Interface
+
+---
+
+# 🏗️ System Architecture
+
+```text
+                 User Uploads Files
+              (PDF / DOCX / Image)
+                        │
+                        ▼
+             FastAPI Backend Server
+                        │
+        ┌───────────────┼────────────────┐
+        │               │                │
+        ▼               ▼                ▼
+ PDF Processing    Image Analysis    Project APIs
+        │               │                │
+        ▼               ▼                ▼
+ Text Chunking    Gemini Vision      SQLite DB
+        │
+        ▼
+ Sentence Transformer Embeddings
+        │
+        ▼
+      FAISS Index
+        │
+        ▼
+ Semantic Similarity Search
+        │
+        ▼
+   Relevant Context Retrieved
+        │
+        ▼
+      Gemini AI Response
+        │
+        ▼
+ React Dashboard Interface
+```
+
+---
+
+# 🚀 Tech Stack
+
+## Frontend
+
+- React
+- Vite
+- CSS3
+
+## Backend
+
+- FastAPI
+- Python
+
+## AI & NLP
+
+- Google Gemini API
+- FAISS
+- Sentence Transformers
+- LangChain
+
+## Database
+
+- SQLite
+
+## File Processing
+
+- PyMuPDF
+- python-docx
+
+---
+
+# 📸 Screenshots
+
+## 🏠 Dashboard
+
+The landing dashboard provides live project statistics and quick insights.
+
+> Add: `assets/dashboard.png`
+
+---
+
+## 📚 Knowledge Base
+
+Upload documents and images to build an intelligent searchable knowledge repository.
+
+> Add: `assetsknowledge-base.png`
+
+---
+
+## 🤖 AI Assistant
+
+Ask questions in natural language and receive context-aware answers from uploaded documents.
+
+> Add: `assetsai-chat.png`
+
+---
+
+## 📋 Project Management
+
+Create, edit, delete and organize projects with real-time status tracking.
+
+> Add: `assets/projects.png`
+
+---
+
+## 📊 Analytics Dashboard
+
+Monitor AI usage, recent activity, and project completion statistics.
+
+> Add: `assets/analytics.png`
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone Repository
+
+```bash
 git clone https://github.com/Renu-gehlot/IntelliSphere-AI.git
+
 cd IntelliSphere-AI
-\`\`\`
+```
 
-### Backend
+---
 
-\`\`\`bash
+## 2️⃣ Backend Setup
+
+```bash
 cd backend
 
 python -m venv venv
+```
 
-venv\\Scripts\\activate
+### Windows
 
+```bash
+venv\Scripts\activate
+```
+
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
+### Run Backend
+
+```bash
 uvicorn main:app --reload
-\`\`\`
+```
 
-### Frontend
+Backend runs at:
 
-\`\`\`bash
+```text
+http://127.0.0.1:8000
+```
+
+API Docs:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## 3️⃣ Frontend Setup
+
+```bash
 cd frontend
 
 npm install
 
 npm run dev
-\`\`\`
+```
 
-Open:
+Frontend runs at:
 
-- Frontend → http://localhost:5173
-- Backend → http://127.0.0.1:8000/docs
+```text
+http://localhost:5173
+```
 
 ---
 
-## 📁 Project Modules
+# 📂 Project Structure
+
+```text
+IntelliSphere-AI/
+│
+├── backend/
+│   ├── documents/
+│   ├── images/
+│   ├── models/
+│   ├── routes/
+│   ├── faiss_index/
+│   ├── main.py
+│   ├── rag.py
+│   ├── image_service.py
+│   ├── embeddings.py
+│   ├── vector_database.py
+│   ├── intellisphere.db
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── styles/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   └── vite.config.js
+│
+├── assets/
+│   ├── dashboard.png
+│   ├── knowledge-base.png
+│   ├── ai-chat.png
+│   ├── projects.png
+│   └── analytics.png
+│
+├── README.md
+└── .gitignore
+```
+
+---
+
+# 🧩 Core Modules
 
 ### 📚 Knowledge Base
 
-Upload documents and automatically create searchable embeddings using FAISS.
+Upload documents and automatically generate embeddings for semantic retrieval using FAISS.
 
 ### 🤖 AI Assistant
 
-Ask natural language questions about uploaded documents and receive contextual answers.
+Interact with your documents using conversational AI powered by Gemini.
 
-### 🖼 Image Intelligence
+### 🖼️ Image Intelligence
 
-Analyze images using Gemini Vision and ask questions about visual content.
+Analyze images and ask questions about visual content using Gemini Vision.
 
 ### 📋 Project Manager
 
-Create, update, delete and organize projects with status tracking.
+Manage projects with CRUD operations, status tracking, searching, and sorting.
 
 ### 📊 Analytics
 
-Monitor project completion and AI interaction statistics.
+Visualize project progress and AI interaction statistics in a modern dashboard.
 
 ---
 
-## 🎯 Future Improvements
+# 🎯 Future Enhancements
 
-- Voice assistant
-- Multi-user authentication
-- Cloud database
-- OCR for scanned PDFs
-- Real-time collaboration
+- 🔐 User Authentication
+- ☁️ Cloud Database (PostgreSQL)
+- 🎙️ Voice Assistant
+- 🌍 Multi-language Interface
+- 👥 Team Collaboration
+- 📱 Mobile Responsive Dashboard
 
 ---
 
-## 👩‍💻 Developer
+# 👩‍💻 Author
 
 **Renu Gehlot**
 
@@ -131,6 +314,10 @@ Information Technology Engineering
 
 MBM University, Jodhpur
 
+**GitHub:** https://github.com/Renu-gehlot
+
 ---
 
-⭐ If you like this project, consider giving it a star!`}
+## ⭐ Support
+
+If you found this project useful, consider giving it a **Star ⭐** on GitHub!
