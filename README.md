@@ -54,7 +54,7 @@
 ### Clone Repository
 
 \`\`\`bash
-git clone https://github.com/YOUR_USERNAME/IntelliSphere-AI.git
+git clone https://github.com/Renu-gehlot/IntelliSphere-AI.git
 cd IntelliSphere-AI
 \`\`\`
 
